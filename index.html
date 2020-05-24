@@ -2,13 +2,18 @@
 <html>
   <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <!-- Bootstrap CSS, JS, Popper.js, and jQuery -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <!-- end Bootstrap includes -->
-    <title>Michael Swanson - Software Engineer</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+    <script src="js/bubble/BubbleSortViz.js"></script>
+
+    <title>Michael Swanson - Software Developer</title>
   </head>
   <body>
         <header>
@@ -25,7 +30,7 @@
             <section class="jumbotron text-center">
                 <div class="container">
                     <h1>Hi, my name is Michael</h1>
-                    <h2>I am a software engineer.</h2>
+                    <h2>I am a software developer.</h2>
                 </div>
             </section>
             <div class="album">
@@ -35,13 +40,10 @@
                             <div class="card shadow-sm">
                                 <div class="card-body">
                                     <h4 class="card-title">To-Do App</h4>
-                                    <h5 class="card-subtitle">Vanilla JS/localStorage</h5>
+                                    <h5 class="card-subtitle">Javascript</h5>
                                     <hr />
                                     <p class="card-text">
                                         This is a simple to do list app. Since I work with sensitive information, I chose to build a to-do app that does not store lists on a server, but rather stores lists locally using your browser's localStorage structure.
-                                    </p>
-                                    <p class="card-text">
-                                        There are definitely more features I would like to add, but the ultimate goal is to keep this tool simple and to keep me productive.
                                     </p>
                                     <a class="card-link" href="https://to-do.mswanson.me">Live App</a>
                                     <a class="card-link" href="https://github.com/mswanson-me/stay-focused">Github Repo</a>
@@ -75,6 +77,74 @@
                             </div>
                         </div>
                     </div>
+                    <br />
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card shadow-sm">
+                                <div class="card-body">
+                                    <h4 class="card-title">Bubble Sort Algorithm</h4>
+                                    <h5 class="card-subtitle">Javascript/p5.js</h5>
+                                    <hr />
+                                    <p class="card-text">
+                                        This is a bubble sort animation.
+                                    </p>
+                                    <a class="card-link" href="#" data-toggle="modal" data-target="#bubbleModal">Demo Visualization</a>
+                                    <a class="card-link" href="https://github.com/mswanson-me/mswanson-me.github.io/js/bubble">Github Repo</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card shadow-sm">
+                                <div class="card-body">
+                                    <h4 class="card-title">QuickSort Algorithm</h4>
+                                    <h5 class="card-subtitle">Javascript/p5.js</h5>
+                                    <hr />
+                                    <p class="card-text">
+                                        A quick sort animation is coming soon.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card shadow-sm">
+                                <div class="card-body">
+                                    <h4 class="card-title">Merge Sort Algorithm</h4>
+                                    <h5 class="card-subtitle">Javascript/p5.js</h5>
+                                    <hr />
+                                    <p class="card-text">
+                                        A merge sort animation is coming soon.
+                                    </p>
+                                    <!-- <a class="card-link" href="https://jobs.mswanson.me/">Live App</a>
+                                    <a class="card-link" href="https://github.com/mswanson-me/"></a> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+
+                    <!-- Modals -->
+
+                    <div class="modal fade" id="bubbleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLongTitle">Bubble Sort</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body" id="bubbleSketch">
+                                
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" onclick="populateArray()">Generate New Array</button>
+                                <button type="button" class="btn btn-primary" onclick="rerunAnimation()">Run</button>
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
                 </div>
             </div>
       </main>
