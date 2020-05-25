@@ -5,6 +5,15 @@
     align-items: center;
 }
 
-.col-md-4 {
-    padding: 4px;
+.card {
+    margin: 5px 5px 5px 5px;
+}
+
+.card:hover {
+    border-width: 1px 3px 1px 1px;
+    border-style: solid;
+    border-color:purple;}
+
+.row .card-group {
+    width: 100%;
 }
